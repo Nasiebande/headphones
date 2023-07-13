@@ -1,0 +1,1 @@
+Project Description: This project aims to implement a design from scratch using Figma, HTML, and CSS. The design will be responsive, with a mobile version activated when the screen width is 480px or less. The content will have a maximum width of 1000px, centered on the page. Various styles and interactions are defined in the design.
