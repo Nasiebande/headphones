@@ -1,0 +1,311 @@
+@font-face {
+    font-family: SourceSansPro-Regular;
+    src: url(./Font/source-sans-pro/SourceSansPro-Regular.otf);
+  }
+  @font-face {
+    font-family: spincycle_ot;
+    src: url(./Font/Spin-Cycle-OT/spincycle_ot.otf);
+  }
+:root{
+    --main-color-black: #000000;
+    --main-color-red: #FF6565;
+    --main-color-white: #FFFFFF;
+    --main-color-white-gray: #D8D8D8;
+    --main-color-black-gray: #071629;
+    --main-color-gray: #979797;
+    --main-color-Radial-gradient: linear-gradient(#101929, #071629);
+    --main-color-Radial-gradient1: linear-gradient(#29303D, #071629);
+    --background: #FFF;
+
+    /* backgroun ######################### */
+    --background: #FFF;
+    --background-image: url("./images/headphones_hero_1.jpg");
+    --background-image2: url("./images/headphones_hero_2.jpg");
+
+    /* active and hover##################  */
+    --color-active: #FF6565;
+    --opacity: 0.9; 
+
+    /* fontfamily #########################*/
+    --font-family-main: SourceSansPro-Regular;
+    --font-family-second: spincycle_ot;
+}
+
+/* General ####################### */
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 1000px;
+    margin: 0 auto;
+    font-family: var(--font-family-main);
+}
+h1{
+    font-size: 2.2em;
+    text-align: center;
+}
+p{ 
+    width: 63%;
+    text-align: center;
+    font-size: 1.2em;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+  
+}
+button{
+    width: 160px;
+    height: 44px;
+    background-color: var(--main-color-red);
+    color: var(--main-color-white);
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 700;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+/* General ####################### */
+
+/* Header and menu */
+.header{
+    position: absolute;
+    width: 60%;
+    top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.header > .logo > img{
+    width: 16rem;
+   
+}
+.hamburger {
+    display: none;
+}
+  
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--main-color-white-gray);
+    margin-bottom: 5px;
+}
+  
+.toggle-nav {
+    display: none;
+}
+.menu{
+    justify-self: flex-end;
+}
+.menu ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul li {
+    display: block;
+    width: 100px;
+    height: 15px;
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.menu-items li a{
+    text-decoration: none;
+    font-size: 1em;
+    color: var(--main-color-white);
+}
+ul li a:hover, ul li a:active
+{
+    color: var(--color-active);
+    opacity: var(--opacity);
+    transition: 1s ease-in-out;
+}
+
+/* Header and menu #####################*/
+
+/* Landing Page or Section */
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.welcome{
+    background-image: url("./images/headphones_hero_1.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+ 
+}
+.welcome > h1{
+    color: var(--main-color-white);
+    padding-top: 15rem;
+}
+.welcome p:nth-of-type(1){
+    margin-top: -1.5rem;
+    color: var(--main-color-white);
+}
+.welcome p:nth-of-type(2){
+    margin-top: 5rem;
+    width: 637px;
+    line-height: 26px;
+    font-weight: 400;
+    color: var(--main-color-white);
+}
+
+/* Landing Page or Section ######################*/
+
+/* what-we-do ###########################*/
+
+.what-we-do{
+    padding-top: 3rem;
+}
+.what-we-do .service-lists {
+    padding-top: 3rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.service-lists > .service-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.service-lists > .service-items > img{
+    width: 50px;
+    aspect-ratio: .9;
+}
+.service-lists > .service-items > p{
+    width: 15rem;
+}
+
+/* what-we-do ###########################*/
+
+/* our-results ######################## */
+.our-results{
+    background-image: var(--background-image2);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--main-color-white);
+}
+
+.our-results .results-lists{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+   
+}
+
+.results-lists .results-items{
+    background-image: url(./images/pentagone.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  
+}
+.results-items > p:nth-of-type(1){
+    font-size: 2.5em;
+    font-weight: bold;
+    padding-top: 50px; 
+    margin: auto; 
+ 
+}
+.results-items > p:nth-of-type(2){
+    width: 100%;
+    height: 50%;
+    font-size: .9em;
+    margin: 0 auto; 
+}
+
+/* our-results ######################## */
+
+/* contact-us ########################## */
+.contact-us{
+    height: 80%;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+}
+
+.contact-us > form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+input[type=text]{
+    width: 25rem;
+    height: 3rem;
+    border: none;
+    border-bottom: 1px solid var(--main-color-gray);
+}
+
+::placeholder{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* contact-us ########################## */
+
+@media screen and (min-width: 768px) {
+
+    body{
+        width: 100%;
+    } 
+    .service-lists, .results-lists{
+        flex-wrap: wrap;
+        column-gap: 5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    body{
+        width: 100%;
+    }
+    .menu ul{
+        flex-direction: column;
+       
+    }
+    .hamburger {
+      display: block;
+      order: 2;
+      cursor: pointer;
+      
+    }
+    .hamburger span{
+        background-color: var(--color-white);
+    }
+    nav {
+      display: none;
+      order: 3;
+      width: 100%;
+    }
+    .toggle-nav:checked ~ nav {
+      display: block;
+    }
+
+    .service-lists, .results-lists{
+        flex-direction: column;
+        flex-wrap: wrap;
+        column-gap: 5rem;
+    }
+    input[type=text]{
+        width: 15rem;     
+    }
+}
